@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      resource:
+        filter-order: 3
+      client:
+        registration:
+          google:
+            client-id:  202851038268-oj268bigqij13pohsfmdoal1ov8p2rj7.apps.googleusercontent.com
+            client-secret: a4o3qko6rq629ukU1jPiKCoa
+            tokenUri: https://www.googleapis.com/oauth2/v4/token
+            userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+            redirect-uri-template: ${MY_PROJECT_DOMAIN_NAME:http://localhost:8080}/google/login
+            userInfoUri:  https://www.googleapis.com/oauth2/v3/userinfo
+            scope: profile,email
